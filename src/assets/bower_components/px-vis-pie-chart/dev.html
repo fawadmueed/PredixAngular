@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>px-vis-pie-chart Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../px-theme/px-theme-styles.html">
+  <!-- <link rel="import" href="../px-dark-theme/px-dark-theme-styles.html"> -->
+  <custom-style>
+    <style include="px-theme-styles" is="custom-style"></style>
+  </custom-style>
+
+  <link rel="import" href="../promise-polyfill/promise-polyfill-lite.html">
+  <link rel="import" href="../iron-ajax/iron-ajax.html" />
+
+  <link rel="import" href="px-vis-pie-chart.html"/>
+
+  </head>
+
+<body>
+  <dom-bind>
+  <template id="just-for-demo" is="dom-bind" >
+    <iron-ajax
+      url="demo_data.json"
+      handle-as="json"
+      last-response="{{data}}" auto>
+    </iron-ajax>
+
+    <div style="height:800px; background-color: salmon">
+      <px-vis-pie-chart
+        chart-data="{{data}}"
+        height="500"
+        donut
+
+        width="500"
+        show-title
+        register-config='{
+          "type": "horizontal",
+          "horizontalAlignment": "center"
+        }'
+        chart-horizontal-alignment="center"
+        chart-vertical-alignment="center"
+        aggregate-other-register
+        margin='{ "top": "50", "bottom": "10", "left": "80", "right": "80" }'
+        series-config='{
+          "mySerie" :{"xAxisUnit": "pints",
+          "y": "y",
+          "x": "x"}
+          }'
+        max-registers=0
+        dynamic-menu-config='[{
+          "name": "Delete",
+          "action": "function(data) { console.log(\"bite\")}",
+          "eventName": "delete",
+          "icon": "px-vis:trash-series"
+        }
+      ]'>
+      </px-vis-pie-chart>
+    </div>
+
+  </template>
+  </dom-bind>
+
+</body>
+</html>

@@ -1,21 +1,95 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+
+<div class="layout layout--huge layout--center">
+  <div class="layout__item u-1/4" id="box">Installed Px Starter Kit Design (Inuit CSS)</div>
+  <div class="layout__item u-1/4" id="box">Layout Item 2. <br> More text to show functionality.</div>
+  <div class="layout__item u-1/4" id="box">Layout Item 3</div>
+</div>
+
+<a class="actionable">Actionable Text</a>
+<p class="actionable">
+  <!-- <px-icon icon="px-fea:analysis"></px-icon> -->
+</p>
+
+<h1>Buttons</h1>
+<!-- Default Button: -->
+<button class="btn">Button</button>
+
+
+<!-- Sizes of Buttons: -->
+<button class="btn btn--small">Small</button>
+<button class="btn btn--large">Large</button>
+<button class="btn btn--huge">Huge</button>
+<button class="btn btn--full">Full</button>
+
+
+<!-- Types of Buttons: -->
+<button class="btn btn--primary">Primary</button>
+<button class="btn btn--call-to-action">Call To Action</button>
+<button class="btn btn--call-to-action btn--disabled">Call To Action (disabled)</button>
+<button class="btn btn--tertiary">Tertiary</button>
+<button class="btn btn--disabled">Disabled</button>
+<button class="btn btn--bare">Bare</button>
+<button class="btn btn--bare--primary">Bare Primary</button>
+
+
+<!-- Iconic Buttons: -->
+<button class="btn btn--icon">Icon</button>
+
+<h1>Layout - GRID</h1>
+
+<div class="layout layout--tiny">
+  <!-- <div class="layout__item u-1/12 box">Layout Item 1</div> -->
+  <div class="layout__item u-1 box" >Layout Item 1. <br> More text to show functionality.</div>
+  <div class="layout__item u-1 box">Layout Item 2</div>
+  <div class="layout__item u-1 box">Layout Item 3</div>
+</div>
+
+<div class="layout layout--large box">
+  <div class="layout__item u-1 box" >Layout Item 1. <br> More text to show functionality.</div>
+  <div class="layout__item u-1 box">Layout Item 2</div>
+  <div class="layout__item u-1 box">Layout Item 3</div>
+</div>
+<div class="layout layout--middle">
+  <div class="layout__item u-1 box" >Layout Item 1. <br> More text to show functionality.</div>
+  <div class="layout__item u-1 box">Layout Item 2</div>
+  <div class="layout__item u-1 box">Layout Item 3</div>
+</div>
+<div class="layout layout--huge box">Huge</div>
+<div class="layout box">normal</div>
+
+<px-card header-text="First Card - Fawad" icon="px-fea:alerts">
+    <div class='actions'>
+      <px-icon icon='px-utl:app-settings'></px-icon>
+    </div>
+    <div class="flex flex--wrap flex--justify">
+      <div class="gaugeContainer u-p u-mb flex flex--col">
+        <div class="flex u-mb">
+          <px-key-value-pair key="Measured Output" value="110MW" size="delta"></px-key-value-pair>
+          <px-simple-bar-chart class="u-ml++" width="100" height="50" chart-data='[ [112,57,53,122,128,120,56] ]' colors='["#8098FF"]'></px-simple-bar-chart>
+        </div>
+        <px-gauge class="gauge1" value="66" unit="%" normal='[ [0,100] ]' bar-width="20"></px-gauge>
+      </div>
+      <div class="gaugeContainer u-p u-mb flex flex--col">
+        <div class="flex u-mb">
+          <px-key-value-pair key="Measured Output" value="15MW" size="delta"></px-key-value-pair>
+          <px-simple-bar-chart class="u-ml++" width="100" height="50" chart-data='[ [53,122,128,120,56,94,102] ]' colors='["#7BA662"]'></px-simple-bar-chart>
+        </div>
+        <px-gauge class="gauge2" value="10" unit="%" normal='[ [0,100] ]' bar-width="20"></px-gauge>
+      </div>
+      <div class="gaugeContainer u-p u-mb flex flex--col">
+        <div class="flex u-mb">
+          <px-key-value-pair key="Measured Output" value="121MW" size="delta"></px-key-value-pair>
+          <px-simple-bar-chart class="u-ml++" width="100" height="50" chart-data='[ [53,122,128,120,56,94,102] ]' colors='["#E081C9"]'></px-simple-bar-chart>
+        </div>
+        <px-gauge class="gauge3" value="65" unit="%" normal='[ [0,100] ]' bar-width="20"></px-gauge>
+      </div>
+      <div class="gaugeContainer u-p u-mb flex flex--col">
+        <div class="flex u-mb">
+          <px-key-value-pair key="Measured Output" value="98MW" size="delta"></px-key-value-pair>
+          <px-simple-bar-chart class="u-ml++" width="100" height="50" chart-data='[ [53,122,128,120,56,94,102] ]' colors='["#E9A24B"]'></px-simple-bar-chart>
+        </div>
+        <px-gauge class="gauge4" value="90" unit="%" normal='[ [0,100] ]' bar-width="20"></px-gauge>
+      </div>
+    </div>
+  </px-card>

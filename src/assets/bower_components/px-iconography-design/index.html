@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link defer rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Predix UI</title>
+
+    <!-- Load polyfill and Polymer -->
+    <script src="../webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="../polymer/polymer.html" />
+
+    <!-- Load demo component -->
+    <link rel="import" href="demo/px-iconography-design-demo.html" />
+
+    <!-- Basic document styles -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      @font-face {
+        font-family: FontAwesome;
+        src: url("../font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0");
+        src: url("../font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"),
+             url("../font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"),
+             url("../font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"),
+             url("../font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"),
+             url("../font-awesome/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+        font-weight: 400;
+        font-style: normal
+      }
+    </style>
+
+    <!-- Load and apply theme -->
+    <link rel="import" href="../px-theme/px-theme-styles.html" />
+    <custom-style>
+      <style include="px-theme-styles" is="custom-style"></style>
+    </custom-style>
+  </head>
+  <body>
+    <px-iconography-design-demo></px-iconography-design-demo>
+  </body>
+</html>
